@@ -1,0 +1,12 @@
+<h2>All Bands - <%= @album.band.name %>  -  <%= @album.name %></h2>
+
+<h4>Tracks</h4>
+
+<h4>Links</h4>
+
+<ul>
+  <li><%= link_to "New Track", album_url(@album) %></li>
+  <li><%= link_to "Edit Album", edit_album_url %></li>
+  <li><%= link_to "Delete Album", album_url(@album), method: :delete %></li>
+  <li><%= link_to @album.band.name, band_url(@album.band) %></li>
+</ul>
