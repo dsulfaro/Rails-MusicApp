@@ -1,9 +1,10 @@
 class Band < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
-  
-  private
-  def band_params
-    params.require(:band).permit(:name)
-  end
+
+  has_many :albums,
+    primary_key: :id,
+    foreign_key: :band_id,
+    class_name: "Album"
+
 end

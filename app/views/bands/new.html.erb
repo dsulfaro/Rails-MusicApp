@@ -1,2 +1,6 @@
 <h2>New Band</h2>
+<%= render "shared/errors" %>
 <%= render "form", band: Band.new %>
+
+<br>
+<%= link_to "All Bands", bands_url %>
