@@ -1,0 +1,5 @@
+<h2>Hello, <%= "#{current_user.email}" %></h2>
+
+<h3>Stuff for you to look at</h3>
+
+<%= button_to "Logout", session_url, method: :delete %>
