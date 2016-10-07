@@ -1,0 +1,14 @@
+<h2>All Bands - <%= @track.band.name %>  -  <%= @track.album.name %></h2>
+<h3><%= @track.name %></h3>
+<% if @track.lyrics != "" %>
+  <%= ugly_lyrics(@track.lyrics) %>
+<% else %>
+  <%= link_to "Add Lyrics", edit_track_url(@track) %>
+<% end %>
+
+<h4>Links</h4>
+<ul>
+  <li><%= link_to "Edit Track", edit_track_url(@track) %></li>
+  <li><%= link_to "Delete Track", track_url(@track), method: :delete%></li>
+  <li><%= link_to @track.album.name, album_url(@track.album)%></li>
+</ul>
